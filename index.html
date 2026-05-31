@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Modest Fashion</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================
+   GLOBAL STYLE LUXE
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Playfair Display', serif;
+}
+
+body{
+  background:#f7f3ef;
+  color:#222;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+a{ text-decoration:none; color:inherit; }
+
+.btn{
+  padding:12px 18px;
+  border-radius:30px;
+  border:none;
+  cursor:pointer;
+  transition:0.3s;
+  font-weight:600;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero{
+  height:100vh;
+  background:url("makina.png.jpeg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(8, 8, 8, 0.45);
+}
+
+.hero-content{
+  position:relative;
+  color:rgb(41, 30, 6);
+  max-width:700px;
+  animation:fadeIn 2s ease;
+}
+
+.hero h1{
+  font-size:50px;
+  letter-spacing:1px;
+}
+
+.hero p{
+  margin:70px 0;
+  opacity:0.9;
+}
+
+.whatsapp-btn{
+  background:#412b03;
+  color:#fff;
+  margin-top:15px;
+  display:inline-block;
+}
+
+.whatsapp-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section{
+  padding:80px 10%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+/* =========================
+   GRID ABAYAS
+========================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.card{
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card img{
+  width:100%;
+  height:380px; /* زدت شوية فالطول باش تبان العباية كاملة */
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.card:hover img{
+  transform:scale(1.1);
+}
+
+.card-body{
+  padding:15px;
+  text-align:center;
+}
+
+.price{
+  color:#b08d57;
+  font-weight:bold;
+  margin: 10px 0;
+}
+
+/* =========================
+   BOX PRAYER 3D
+========================= */
+.box-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.box{
+  background:linear-gradient(145deg,#fff,#eae2d6);
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  transition:0.5s;
+  transform-style:preserve-3d;
+}
+
+.box:hover{
+  transform:rotateY(10deg) rotateX(10deg);
+}
+
+.box img{
+  width:100%;
+  border-radius:15px;
+  height:260px;
+  object-fit:cover;
+}
+
+/* =========================
+   OFFRE DU JOUR
+========================= */
+.offer{
+  background:#3d2e03;
+  color:white;
+  text-align:center;
+  padding:60px 10%;
+  border-radius:30px;
+}
+
+.countdown{
+  font-size:28px;
+  color:#d4af37;
+  margin:20px 0;
+}
+
+/* =========================
+   INFO ICONS
+========================= */
+.icons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  text-align:center;
+}
+
+.icon-box{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+.floating{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 20px;
+  border-radius:50px;
+  font-weight:bold;
+  z-index:999;
+  animation:pulse 2s infinite;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+  text-align:center;
+  padding:40px;
+  background:#fff;
+  margin-top:50px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr);}
+  .box-grid{grid-template-columns:repeat(1,1fr);}
+  .icons{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr;}
+  .hero h1{font-size:28px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Luxury Modest Fashion</h1>
+    <p>Abayas Premium & Box de Prière Haut de Gamme</p>
+    <a class="btn whatsapp-btn" href="https://wa.me/212689354692">Commander maintenant</a>
+  </div>
+</div>
+
+<!-- ABAYAS -->
+<div class="section">
+  <h2 class="section-title">Collection Abayas</h2>
+  <!-- عطينا id للـ grid باش نتحكمو فيه بالـ JavaScript بطريقة نقية -->
+  <div class="grid" id="abayas-container"></div>
+</div>
+
+<!-- BOX DE PRIERE -->
+<div class="section">
+  <h2 class="section-title">Box de Prière</h2>
+
+  <div class="box-grid">
+    <div class="box">
+      <!-- تصاور جداد خدامين 100% للبوكس -->
+      <img src="shny7.png.jpeg" alt="Box Blanche"/>
+      <h3>Box Blanche</h3>
+      <p>Un tapis et une tenue de prière luxueux en satin beige, ornés de broderies en dentelle dorée raffinée et accompagnés d'un chapelet en perles assorti<br>.</p>
+      <a class="btn whatsapp-btn" href="https://wa.me/212600000000">Commander</a>
+    </div>
+
+    <div class="box">
+      <img src="shny6.png.jpeg" alt="Box Rose"/>
+      <h3>Box Elegance</h3>
+      <p>Cet ensemble de prière de luxe se compose d'un tapis de prière et d'une robe de prière (Isdal), tous deux ornés de dentelle, accompagnés d'un chapelet (Tasbih) et d'un flacon de musc.</p>
+      <a class="btn whatsapp-btn" href="https://wa.me/212600000000">Commander</a>
+    </div>
+
+    <div class="box">
+      <img src="shiny4.png.jpeg"/>
+      <h3>Box complet</h3>
+      <p>Ceci est un coffret de prière de mariage luxueux en beige et doré, composé d'un tapis, d'une abaya de prière, d'un Coran personnalisé, d'un chapelet et d'une petite boîte à encens.</p>
+      <a class="btn whatsapp-btn" href="https://wa.me/212600000000">Commander</a>
+    </div>
+  </div>
+</div>
+
+<!-- OFFRE DU JOUR -->
+<div class="section">
+  <div class="offer">
+    <h2>🔥 Offre du jour -20%</h2>
+    <div class="countdown" id="timer">00:00:00</div>
+    <p>Offre limitée sur une sélection exclusive</p>
+    <a class="btn whatsapp-btn" href="https://wa.me/212600000000">Profiter maintenant</a>
+  </div>
+</div>
+
+<!-- AVANTAGES -->
+<div class="section">
+  <h2 class="section-title">Nos Avantages</h2>
+
+  <div class="icons">
+
+    <div class="icon-box">🚚 Livraison gratuite</div>
+    <div class="icon-box">✨ Fait main avec amour</div>
+    <div class="icon-box">📞 WhatsApp 24/7</div>
+    <div class="icon-box">✨ Qualité premium</div>
+    
+
+  </div>
+</div>
+
+<!-- FLOAT WHATSAPP -->
+<a class="floating" href="https://wa.me/212600000000">
+  WhatsApp
+</a>
+
+<!-- FOOTER -->
+<footer>
+  <p>Luxury Modest Fashion © 2026</p>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+  // ليستة فيها سمية كل عباية والتصويرة الخاصة بها باش كل وحدة تخرج مختلفة ونقية
+  const abayasData = [
+    { name: "Abaya Dentelle <br><br><br><br>350dh", img: "7.jpeg" },
+    { name: "Abaya bleu fonce elegante et sophistquee realise dans un tissu fluide<br> <br>450dh", img: "shiny3.png.jpeg" },
+    { name: "Abaya noire élégante avec de subtils détails tressés au niveau des manches, offrant un style chic, moderne et raffiné.<br>350dh", img: "lakhera.jpg.jpeg" },
+    { name: "Ivory Flow", img: "vert.jpg.jpeg" },
+    { name: "Brown Elegance", img: "khla.jpg.jpeg" },
+    { name: "Grey Soft", img: "rouge.jpg.jpeg" },
+  ];
+
+  const gridContainer = document.getElementById('abayas-container');
+  let htmlContent = '';
+
+  abayasData.forEach(item => {
+    htmlContent += `
+      <div class="card">
+        <img src="${item.img}" alt="${item.name}" />
+        <div class="card-body">
+          <h3>${item.name}</h3>
+          
+          <a class="btn whatsapp-btn" href="https://wa.me/212600000000?text=Je%20veux%20commander%20l'abaya%20${encodeURIComponent(item.name)}">
+            Commander
+          </a>
+        </div>
+      </div>
+    `;
+  });
+
+  gridContainer.innerHTML = htmlContent;
+
+  // سكريبت الـ Timer معدل باش يبقى ديما يحسب ساعة تنازلية من فاش كتحل الصفحة
+  let countDownDate = new Date().getTime() + 3600000; 
+
+  function updateTimer(){
+    let now = new Date().getTime();
+    let diff = countDownDate - now;
+
+    if (diff < 0) {
+      countDownDate = new Date().getTime() + 3600000; // ريستارت يلا تسالى الووقت
+      return;
+    }
+
+    let h = Math.floor(diff/(1000*60*60));
+    let m = Math.floor((diff%(1000*60*60))/(1000*60));
+    let s = Math.floor((diff%(1000*60))/1000);
+
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    document.getElementById("timer").innerHTML = h + ":" + m + ":" + s;
+  }
+  setInterval(updateTimer, 1000);
+  updateTimer(); // باش يخدم مباشرة بلا ما يتسنى ثانية
+</script>
+
+</body>
+</html>
